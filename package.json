@@ -1,6 +1,6 @@
 {
   "name": "@12joan/react-utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A collection of hooks, components and util functions for use with React",
   "license": "MIT-0",
   "main": "dist/index.js",
@@ -9,9 +9,10 @@
     "/dist"
   ],
   "scripts": {
-    "build": "yarn brl && tsc",
+    "build": "tsc",
     "brl": "barrelsby -d src -D -l all",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prepublish": "yarn lint --max-warnings 0 && yarn build"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
